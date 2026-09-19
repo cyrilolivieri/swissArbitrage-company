@@ -1,0 +1,135 @@
+User-agent: *
+Disallow: /a/downloads/-/*
+Disallow: /admin
+Disallow: /cart
+Disallow: /orders
+Disallow: /checkout
+Disallow: /3846721/checkouts
+Disallow: /3846721/orders
+Disallow: /carts
+Disallow: /account
+Disallow: /collections/*sort_by*sort_by*
+Disallow: /the-nomadic/*+*
+Disallow: /the-nomadic/*%2B*
+Disallow: /the-nomadic/*%2b*
+Disallow: /*/the-nomadic/*+*
+Disallow: /*/the-nomadic/*%2B*
+Disallow: /*/the-nomadic/*%2b*
+Disallow: /*design_theme_id*
+Disallow: /*preview_theme_id*
+Disallow: /*preview_script_id*
+Disallow: /search
+Disallow: /*search%3Fq%3D*
+Disallow: /*search?q=%7Bsearch_term%7D*
+Disallow: /apple-app-site-association
+Disallow: /sandbox-alex
+Disallow: /sandbox-vanlife
+Disallow: /sandbox-reese
+Disallow: /sandbox-athlete
+Disallow: /slider-test
+Disallow: /sandbox-duncan
+Disallow: /productbox-test
+Disallow: /sandbox/sandbox-key-clip
+Disallow: /sandbox/sandbox-ipad-updated
+Disallow: /sandbox-modern
+Disallow: /sandbox-sport
+Disallow: /sandbox-neil
+Disallow: /sandbox-madeline
+Disallow: /sandbox-account-rewards
+Sitemap: https://nomadgoods.com/sitemap.xml
+
+# Google adsbot ignores robots.txt unless specifically named!
+User-agent: adsbot-google
+Disallow: /checkout
+Disallow: /carts
+Disallow: /orders
+Disallow: /3846721/checkouts
+Disallow: /3846721/orders
+Disallow: /*design_theme_id*
+Disallow: /*preview_theme_id*
+Disallow: /*preview_script_id*
+
+# Block HTTrack and other common website copiers
+User-agent: HTTrack
+Disallow: /
+
+User-agent: Teleport
+Disallow: /
+
+User-agent: TeleportPro
+Disallow: /
+
+User-agent: WebZip
+Disallow: /
+
+User-agent: OfflineExplorer
+Disallow: /
+
+User-agent: SiteSucker
+Disallow: /
+
+User-agent: WebCopier
+Disallow: /
+
+User-agent: Nutch
+Disallow: /
+
+User-agent: AhrefsBot
+Crawl-delay: 10
+Disallow: /a/downloads/-/*
+Disallow: /admin
+Disallow: /cart
+Disallow: /orders
+Disallow: /checkout
+Disallow: /3846721/checkouts
+Disallow: /3846721/orders
+Disallow: /carts
+Disallow: /account
+Disallow: /collections/*sort_by*sort_by*
+Disallow: /the-nomadic/*+*
+Disallow: /the-nomadic/*%2B*
+Disallow: /the-nomadic/*%2b*
+Disallow: /*/the-nomadic/*+*
+Disallow: /*/the-nomadic/*%2B*
+Disallow: /*/the-nomadic/*%2b*
+Disallow: /*design_theme_id*
+Disallow: /*preview_theme_id*
+Disallow: /*preview_script_id*
+Disallow: /search
+Disallow: /*search%3Fq%3D*
+Disallow: /*search?q=%7Bsearch_term%7D*
+Disallow: /apple-app-site-association
+Sitemap: https://nomadgoods.com/sitemap.xml
+
+User-agent: AhrefsSiteAudit
+Crawl-delay: 10
+Disallow: /a/downloads/-/*
+Disallow: /admin
+Disallow: /cart
+Disallow: /orders
+Disallow: /checkout
+Disallow: /3846721/checkouts
+Disallow: /3846721/orders
+Disallow: /carts
+Disallow: /account
+Disallow: /collections/*sort_by*sort_by*
+Disallow: /the-nomadic/*+*
+Disallow: /the-nomadic/*%2B*
+Disallow: /the-nomadic/*%2b*
+Disallow: /*/the-nomadic/*+*
+Disallow: /*/the-nomadic/*%2B*
+Disallow: /*/the-nomadic/*%2b*
+Disallow: /*design_theme_id*
+Disallow: /*preview_theme_id*
+Disallow: /*preview_script_id*
+Disallow: /search
+Disallow: /*search%3Fq%3D*
+Disallow: /*search?q=%7Bsearch_term%7D*
+Disallow: /apple-app-site-association
+Sitemap: https://nomadgoods.com/sitemap.xml
+
+User-agent: MJ12bot
+Crawl-Delay: 10
+
+User-agent: Pinterest
+Crawl-delay: 1

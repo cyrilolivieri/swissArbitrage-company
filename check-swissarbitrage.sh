@@ -1,0 +1,1 @@
+/home/cyril/swissArbitrage-company/80_automation/scripts/automation_check-swissarbitrage.sh

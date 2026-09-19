@@ -1,0 +1,20 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "ollama-cloud/kimi-k2.7-code",
+  "provider": {
+    "ollama-cloud": {
+      "npm": "@ai-sdk/openai-compatible",
+      "name": "Ollama Cloud",
+      "options": {
+        "baseURL": "https://ollama.com/v1",
+        "apiKey": "{env:OLLAMA_API_KEY_ACTIVE}"
+      },
+      "models": {
+        "kimi-k2.7-code": {
+          "name": "Kimi K2.7 Code (Ollama Cloud)",
+          "limit": { "context": 256000, "output": 65536 }
+        }
+      }
+    }
+  }
+}

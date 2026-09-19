@@ -1,0 +1,185 @@
+project: CompactBox
+company: swissArbitrage-company
+folder: /home/cyril/swissArbitrage-company/50_site/swiss-arbitrage-company-website
+generated: 2026-09-17
+
+epics:
+  - id: EPIC-001
+    title: Design storefront CompactBox
+    status: ready
+    priority: P0
+    next: true
+    objective: |
+      Construire le thème enfant CompactBox sur Astra, reproduire l’architecture UX de Nomad Goods
+      (header, hero, grids de collections, fiches produit, footer), et préparer le site en mode offline
+      (HTTP 503 + noindex) jusqu’au GO opérateur.
+    stories:
+      - id: STORY-001-01
+        title: Créer le thème enfant CompactBox
+        priority: P0
+        acceptance:
+          - Dossier wp-content/themes/compactbox/ créé avec style.css (Template: astra), functions.php, screenshot.png
+          - Thème enfant activé sans erreur
+          - Overrides CSS/JS chargés uniquement via le thème enfant
+        notes: |
+          Ne PAS modifier Astra parent. Utiliser wp_enqueue_scripts avec version basée sur filemtime.
+
+      - id: STORY-001-02
+        title: Header Nomad-like navigation + sélecteur langue + panier
+        priority: P0
+        acceptance:
+          - Header sticky 70–90 px
+          - Navigation principale par famille de produit (6 familles MVP)
+          - Recherche discret, panier, sélecteur FR/DE/EN/IT
+          - Mobile-first avec menu hamburger
+
+      - id: STORY-001-03
+        title: Hero pleine largeur homepage
+        priority: P0
+        acceptance:
+          - Hero full-width 60–80vh
+          - Titre accrocheur clé actuelle, CTA unique vers le shop
+          - Visuel placeholder prêt à être remplacé par asset final
+
+      - id: STORY-001-04
+        title: Grids de collections par famille
+        priority: P0
+        acceptance:
+          - Grids 2 cols mobile / 4 cols desktop
+          - 6 cards Câbles, Hubs, Stands, Supports, Adaptateurs, Organisateurs
+          - Chaque card = image, nom, description courte, lien
+
+      - id: STORY-001-05
+        title: Section best-sellers / nouveautés
+        priority: P1
+        acceptance:
+          - Carrousel max 8 produits
+          - Ne pas générer de faux avis ni de faux produits
+
+      - id: STORY-001-06
+        title: Section storytelling confiance
+        priority: P1
+        acceptance:
+          - Blocs “Livraison suisse”, “Prix comparés”, “Sans compromis”
+          - Copy sobre et factuel
+
+      - id: STORY-001-07
+        title: Footer multi-colonnes
+        priority: P0
+        acceptance:
+          - Identité vendeur (placeholder si adresse légale non finalisée)
+          - Liens CGV, Confidentialité, Livraison, Retours, Contact, Comment commander
+          - Paiements acceptés, sélecteur langue
+
+      - id: STORY-001-08
+        title: Fiche produit structurée
+        priority: P0
+        acceptance:
+          - Galerie, titre SEO, prix CHF, shipping visible
+          - Specs, compatibilité, contenu de la boîte, FAQ
+          - CTA “Ajouter au panier"
+          - Schema.org Product JSON-LD injecté
+
+      - id: STORY-001-09
+        title: Guard offline 503 + noindex
+        priority: P0
+        acceptance:
+          - Tant que compactbox_site_online=no, front renvoie 503 + meta noindex
+          - Admin reste accessible
+          - Option dans Réglages > CompactBox pour switch online
+
+      - id: STORY-001-10
+        title: Wireframe / maquettes statiques des pages clés
+        priority: P1
+        acceptance:
+          - Maquettes HTML statiques pour homepage, fiche produit, panier, checkout, pages légales
+          - Livrées dans _bmad-output/design-mockups/
+
+  - id: EPIC-002
+    title: Multilingue + SEO
+    status: pending
+    priority: P0
+    objective: |
+      Installer Polylang for WooCommerce, traduire les pages publiques, configurer hreflang,
+      sitemap et structured data.
+    stories:
+      - id: STORY-002-01
+        title: Installer et configurer Polylang for WooCommerce
+      - id: STORY-002-02
+        title: Traduire les pages légales et la homepage
+      - id: STORY-002-03
+        title: Configurer hreflang et URLs propres (/fr/, /de/, /en/, /it/)
+      - id: STORY-002-04
+        title: Implémenter schema.org Product + Organization
+      - id: STORY-002-05
+        title: Générer le feed Google Shopping
+
+  - id: EPIC-003
+    title: Commande et paiement
+    status: pending
+    priority: P0
+    objective: |
+      Configurer panier, checkout en une page avec récapitulatif LCD art. 3, paiement zahls.ch test,
+      email de confirmation multilingue.
+    stories:
+      - id: STORY-003-01
+        title: Configurer le panier éditable
+      - id: STORY-003-02
+        title: Configurer le checkout en une page avec récapitulatif
+      - id: STORY-003-03
+        title: Installer et configurer zahls.ch en mode test
+      - id: STORY-003-04
+        title: Adapter les emails transactionnels multilingues
+
+  - id: EPIC-004
+    title: Dropshipping + marges + tracking
+    status: pending
+    priority: P1
+    objective: |
+      Installer AliNext Lite, AST, Cost of Goods ; mettre en place le forwarding semi-auto,
+      le log commande et le hold si marge cassée.
+    stories:
+      - id: STORY-004-01
+        title: Installer AliNext Lite et importer 1 SKU test
+      - id: STORY-004-02
+        title: Configurer Advanced Shipment Tracking
+      - id: STORY-004-03
+        title: Configurer Cost of Goods et méta marge
+      - id: STORY-004-04
+        title: Hook forwarding et log commande
+      - id: STORY-004-05
+        title: Logique hold/fallback fournisseur
+
+  - id: EPIC-005
+    title: Plugin CompactBox Core
+    status: pending
+    priority: P0
+    objective: |
+      Plugin custom avec offline guard, revenue ceiling monitor, dashboard opérateur et order hooks.
+    stories:
+      - id: STORY-005-01
+        title: Créer le plugin CompactBox Core (boilerplate)
+      - id: STORY-005-02
+        title: Implémenter OfflineGuard 503 + noindex
+      - id: STORY-005-03
+        title: Implémenter RevenueMonitor CA rolling 12 mois
+      - id: STORY-005-04
+        title: Créer le dashboard opérateur
+      - id: STORY-005-05
+        title: Implémenter OrderHooks hold/fallback
+
+  - id: EPIC-006
+    title: QA et mise en ligne différée
+    status: pending
+    priority: P1
+    objective: |
+      Tests Lighthouse, commande test, vérification offline/online, runbook Infomaniak.
+    stories:
+      - id: STORY-006-01
+        title: Tests d’acceptation T01–T08
+      - id: STORY-006-02
+        title: Optimisation Lighthouse ≥ 90 accessibilité
+      - id: STORY-006-03
+        title: Runbook migration Infomaniak
+      - id: STORY-006-04
+        title: Checklist GO live (RC, assurance, adresse, domaine)

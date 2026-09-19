@@ -1,0 +1,128 @@
+[
+  {
+    "name": "Digitec USB Type C - USB Type C (2m, USB 3.2 Gen 2x2, 100W)",
+    "price_chf": 18.0,
+    "source": "digitec",
+    "category": "usb-cables",
+    "date_extracted": "2026-09-15T15:29:38.565511"
+  },
+  {
+    "name": "SBS USB-C - USB-C data and charging cable (1m, USB 3.2 Gen 1)",
+    "price_chf": 27.9,
+    "source": "digitec",
+    "category": "usb-cables",
+    "date_extracted": "2026-09-15T15:29:38.565522"
+  },
+  {
+    "name": "Apple USB-C – USB-C (2m, USB 2.0, 240W)",
+    "price_chf": 24.0,
+    "source": "digitec",
+    "category": "usb-cables",
+    "date_extracted": "2026-09-15T15:29:38.565523"
+  },
+  {
+    "name": "Ugreen USB C – USB C (2m, USB 2.0, 240W)",
+    "price_chf": 26.7,
+    "source": "digitec",
+    "category": "usb-cables",
+    "date_extracted": "2026-09-15T15:29:38.565524"
+  },
+  {
+    "name": "Samsung USB C – USB-C (1.80m, USB 2.0, 60W)",
+    "price_chf": 19.9,
+    "source": "digitec",
+    "category": "usb-cables",
+    "date_extracted": "2026-09-15T15:29:38.565524"
+  },
+  {
+    "name": "Unitek Laptop stand foldable aluminum",
+    "price_chf": 24.9,
+    "source": "digitec",
+    "category": "notebook-stands",
+    "date_extracted": "2026-09-15T15:29:38.565525"
+  },
+  {
+    "name": "ACT Aluminum Laptop Stand",
+    "price_chf": 47.95,
+    "source": "digitec",
+    "category": "notebook-stands",
+    "date_extracted": "2026-09-15T15:29:38.565525"
+  },
+  {
+    "name": "Cover-Discount Aluminium Extendable Laptop Stand",
+    "price_chf": 25.9,
+    "source": "digitec",
+    "category": "notebook-stands",
+    "date_extracted": "2026-09-15T15:29:38.565527"
+  },
+  {
+    "name": "Ugreen LP451 Aluminum Laptop Stand",
+    "price_chf": 24.95,
+    "source": "digitec",
+    "category": "notebook-stands",
+    "date_extracted": "2026-09-15T15:29:38.565528"
+  },
+  {
+    "name": "StarTech 4-Port USB-C Hub Compact",
+    "price_chf": 20.7,
+    "source": "galaxus",
+    "category": "usb-hubs",
+    "date_extracted": "2026-09-15T15:29:38.565529"
+  },
+  {
+    "name": "Goobay Slim 4-Port USB-Hub",
+    "price_chf": 22.7,
+    "source": "galaxus",
+    "category": "usb-hubs",
+    "date_extracted": "2026-09-15T15:29:38.565530"
+  },
+  {
+    "name": "PhoneLook Mini Multiport USB-C Adapter",
+    "price_chf": 27.95,
+    "source": "galaxus",
+    "category": "usb-hubs",
+    "date_extracted": "2026-09-15T15:29:38.565530"
+  },
+  {
+    "name": "StarTech COM 4-Port USB-C Hub with PD",
+    "price_chf": 50.9,
+    "source": "galaxus",
+    "category": "usb-hubs",
+    "date_extracted": "2026-09-15T15:29:38.565531"
+  },
+  {
+    "name": "Satechi Dual USB-C Pro Hub Mini",
+    "price_chf": 41.7,
+    "source": "galaxus",
+    "category": "usb-hubs",
+    "date_extracted": "2026-09-15T15:29:38.565531"
+  },
+  {
+    "name": "Trust MAXO 100W 2P USB-C GAN Charger",
+    "price_chf": 37.7,
+    "source": "galaxus",
+    "category": "usb-chargers",
+    "date_extracted": "2026-09-15T15:29:38.565532"
+  },
+  {
+    "name": "Verbatim Mini GaN charger 100W",
+    "price_chf": 24.9,
+    "source": "galaxus",
+    "category": "usb-chargers",
+    "date_extracted": "2026-09-15T15:29:38.565532"
+  },
+  {
+    "name": "Hama Fast charger USB-C PD/QC/GaN 45W",
+    "price_chf": 17.7,
+    "source": "galaxus",
+    "category": "usb-chargers",
+    "date_extracted": "2026-09-15T15:29:38.565533"
+  },
+  {
+    "name": "SBS 65 Watt GaN wall charger",
+    "price_chf": 64.97,
+    "source": "galaxus",
+    "category": "usb-chargers",
+    "date_extracted": "2026-09-15T15:29:38.565534"
+  }
+]

@@ -1,0 +1,116 @@
+# Swiss Electronics Arbitrage — Guardrails (Machine-Readable)
+# Source: 00_admin/brief/swiss-arbitrage-brief.md
+# Parsed by: agent CEO automation layer
+
+market:
+  target: Switzerland
+  currency: CHF
+  languages:
+    primary: fr
+    recommended: [de]
+    optional: [en]
+
+revenue_ceiling:
+  annual_limit_chf: 100000
+  soft_alert_chf: 70000
+  hard_alert_chf: 90000
+  window_months: 12
+
+pricing:
+  undercut_ratio: 0.80          # your_all_in_price <= competitor * 0.80
+  min_gross_margin: 0.50          # (net - landed) / net >= 0.50
+  stress_test:
+    supplier_cost_increase: 0.10  # +10%
+    shipping_cost_increase: 0.20  # +20%
+    refund_defect_reserve_pct: "non-zero"
+
+product_scope:
+  approved_families:
+    - cables_and_adapters
+    - usb_c_hubs
+    - foldable_passive_laptop_stands
+    - bluetooth_trackers
+    - compact_chargers
+  hard_exclusions:
+    - batteries
+    - earphones_earbuds_headphones
+    - smartphones
+    - mice
+    - items_with_ergonomic_subjectivity
+    - high_defect_probability
+    - firmware_app_required
+    - strong_compatibility_ambiguity
+    - fragile_items
+    - brand_imitation_counterfeit_risk
+    - safety_liability_risk
+  scoring_thresholds:
+    launch: 85
+    test_min: 70
+    test_max: 84
+    reject_below: 70
+
+supplier_quality:
+  dimensions:
+    - store_rating
+    - product_rating
+    - order_volume_history
+    - fulfillment_speed
+    - shipping_method_to_switzerland
+    - return_refund_posture
+    - product_spec_match
+    - stock_consistency
+    - safety_conformity_signals
+    - backup_listing_available
+  required:
+    primary: true
+    backup: true
+
+acquisition:
+  model: pull_only
+  channels:
+    - google_search
+    - google_shopping
+  forbidden:
+    - social_ads
+    - influencer
+    - brand_awareness
+    - push_campaigns
+
+fulfillment:
+  default_mode: dropshipping
+  toggle_levels:
+    - store_default
+    - per_order
+  dropshipping:
+    supplier: aliexpress
+    blind_shipping: true
+    tracking_sync: true
+  classic:
+    inventory_deduction: true
+    swiss_carrier_label: true
+
+legal:
+  jurisdiction: Switzerland
+  lcd_article_3:
+    identity_contact: required
+    contract_steps_visible: required
+    error_correction_step: required
+    order_confirmation_email: required
+  right_of_withdrawal:
+    exists: false
+    note: Swiss law does not guarantee a general online right of withdrawal
+
+vat:
+  threshold_chf: 100000
+  small_consignment_tax_limit_chf: 5
+
+reporting:
+  cadence: weekly
+  metrics:
+    - rolling_revenue_vs_ceiling
+    - per_sku_realized_margin
+    - per_sku_undercut_vs_competitor
+    - defect_refund_rate
+    - supplier_delivery_time
+    - sku_rule_violations
+    - competitor_price_changes
