@@ -10,7 +10,7 @@ if (! defined('ABSPATH')) {
 }
 ?>
 <div class="cb-announce">
-    <p>Compact accessories for Swiss tech setups | <a href="<?php echo esc_url(home_url('/shop/')); ?>">Shop Cables, Hubs, and More</a></p>
+    <p>Compact accessories for Swiss tech setups — <a href="<?php echo esc_url(home_url('/shop/')); ?>">Shop Cables, Hubs, and More</a></p>
 </div>
 <header class="cb-header" role="banner">
     <div class="cb-header__pill">
