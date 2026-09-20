@@ -10,5 +10,5 @@ if (! defined('ABSPATH')) {
 }
 ?>
 <a class="cb-header__brand" href="<?php echo esc_url(home_url('/')); ?>" rel="home">
-    <?php echo esc_html(get_bloginfo('name')); ?>
+    <span class="cb-header__brand-text">COMPACTBOX</span>
 </a>

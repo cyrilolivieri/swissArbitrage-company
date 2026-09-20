@@ -34,6 +34,9 @@ if (! function_exists('compactbox_header')) {
      */
     function compactbox_header(): void
     {
+        if (is_front_page()) {
+            return;
+        }
         get_template_part('template-parts/header');
     }
 }
@@ -174,11 +177,36 @@ if (! function_exists('compactbox_footer')) {
      */
     function compactbox_footer(): void
     {
+        if (is_front_page()) {
+            return;
+        }
         get_template_part('template-parts/footer');
     }
 
     add_action('astra_footer_before', 'compactbox_footer');
 }
+
+// --- Homepage: suppress Astra native header/footer/CSS on front page ---
+add_action('wp', function (): void {
+    if (! is_front_page()) {
+        return;
+    }
+    // Remove Astra native header/footer markup
+    remove_action('astra_header', 'astra_header_markup');
+    remove_action('astra_footer', 'astra_footer_markup');
+    // Remove Astra content wrappers so our sections are full-width
+    remove_action('astra_primary_content_top', 'astra_primary_content_top');
+    remove_action('astra_primary_content_bottom', 'astra_primary_content_bottom');
+});
+
+add_action('wp_enqueue_scripts', function (): void {
+    if (! is_front_page()) {
+        return;
+    }
+    // Dequeue Astra's theme CSS so our child theme CSS is the only stylesheet
+    wp_dequeue_style('astra-theme-css');
+    wp_dequeue_style('astra-theme-css-inline-css');
+}, 20);
 
 if (! function_exists('compactbox_assets')) {
     /**
@@ -211,6 +239,12 @@ if (! function_exists('compactbox_assets')) {
             $script_version,
             true
         );
+
+        // Cache-bust inline assets used by front-page.php
+        wp_localize_script('compactbox-script', 'compactboxAssets', [
+            'themeUrl' => get_stylesheet_directory_uri(),
+            'version'  => $style_version,
+        ]);
     }
 
     add_action('wp_enqueue_scripts', 'compactbox_assets');
